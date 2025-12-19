@@ -69,8 +69,7 @@ jobs:
             Run number ${{ github.run_number }} of workflow <i>${{ github.workflow }}</i> has failed!<br>
             <a href="${{ env.RUN_URL }}" target="_blank">Open run in new window</a>  
           tags: '["tag1", "tag2"]'  # Note that this is an JSON array but between apostophes. You can use doublequotes, but you will need to do the escaping.
-          
- 
+
 ```
 
 ### Debugging

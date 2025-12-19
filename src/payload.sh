@@ -6,8 +6,8 @@ set -e
 
 # SCRIPT_DIR="$(cd "$(dirname "$@")" >/dev/null 2>&1 && pwd)"
 
-source "$SCRIPT_DIR/helpers/log_helpers.sh"
-source "$SCRIPT_DIR/helpers/json_helpers.sh"
+source "$SCRIPT_DIR/helpers/log.sh"
+source "$SCRIPT_DIR/helpers/json.sh"
 source "$SCRIPT_DIR/validate.sh"
 
 

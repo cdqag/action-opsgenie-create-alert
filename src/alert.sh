@@ -6,7 +6,7 @@ set -e
 
 export SCRIPT_DIR="$(cd "$(dirname "$0")" >/dev/null 2>&1 && pwd)"
 
-source "$SCRIPT_DIR/helpers/log_helpers.sh"
+source "$SCRIPT_DIR/helpers/log.sh"
 source "$SCRIPT_DIR/payload.sh"
 
 function trim() {
