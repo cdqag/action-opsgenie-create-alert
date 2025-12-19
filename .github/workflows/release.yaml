@@ -1,12 +1,11 @@
 name: 📦 Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version to release'
-        required: true
-        type: string
+  push:
+    branches:
+    - master
+    paths-ignore:
+    - .cdq/**
 
 jobs:
   test:
@@ -14,7 +13,6 @@ jobs:
 
   release:
     needs: test
-    uses: cdqag/workflow-public/.github/workflows/release-action-to-branch.yaml@v1
+    uses: cdqag/workflow-public/.github/workflows/release-action.yaml@v1
     with:
-        runs-on: ubuntu-latest
-        version: ${{ inputs.version }}
+      runs-on: ubuntu-latest
