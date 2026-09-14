@@ -83,6 +83,12 @@ You can read more about it [here](https://docs.github.com/en/actions/monitoring-
 * Create OpsGenie API key with [an API integration](https://support.atlassian.com/opsgenie/docs/create-a-default-api-integration/)
 * [OpsGenie AlertAPI](https://docs.opsgenie.com/docs/alert-api#create-alert)
 
+## About Creator
+
+![CDQ Logo](https://www.cdq.com/themes/custom/gavias_nonid/logo.svg)
+
+This action has been created and is maitained by [CDQ - Data Quality Solutions &amp; Services for Master Data](https://www.cdq.com/).
+
 ## License
 
 This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details.
