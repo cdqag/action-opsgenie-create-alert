@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://nexus.int.cdq.com/repository/files/schemas/components-metadata/components_metadata_file_schema.json
+team:
+  slug: x-team-infrastructure
+
+components:
+- name: Action Opsgenie Create Alert
+  slug: action-opsgenie-create-alert
+  type: configuration
+  dependencies: []
+  owner: marek.sierocinski@cdq.com
