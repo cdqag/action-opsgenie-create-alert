@@ -168,3 +168,16 @@ teardown() {
 	assert_success
 	assert_output '{"alias":"test-alias","description":"test-description","responders":[{"id":"test-responder-id","type":"team"}],"visibleTo":[{"id":"test-visibleTo-id","type":"team"}],"actions":[{"name":"test-action-name","type":"test-action-type","integrationId":"test-action-integrationId"}],"tags":["test-tag1","test-tag2"],"details":{"test-detail-key":"test-detail-value"},"entity":"test-entity","source":"test-source","priority":"P1","user":"test-user","note":"test-note","message":"test-message"}'
 }
+
+@test "get_payload should keep line breaks, backslashes and stars in text fields" {
+	local description=$'Line one\nLine "two"\n  - path C:\\temp\\x\tend'
+	local note=$'Note one\nNote two'
+	local message='Build * failed'
+
+	run get_payload "" "$description" "" "" "" "" "{}" "" "" "" "" "$note" "$message"
+
+	assert_success
+	assert_equal "$(echo "$output" | jq -r .description)" "$description"
+	assert_equal "$(echo "$output" | jq -r .note)" "$note"
+	assert_equal "$(echo "$output" | jq -r .message)" "$message"
+}
