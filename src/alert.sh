@@ -8,11 +8,7 @@ export SCRIPT_DIR="$(cd "$(dirname "$0")" >/dev/null 2>&1 && pwd)"
 
 source "$SCRIPT_DIR/helpers/log.sh"
 source "$SCRIPT_DIR/payload.sh"
-
-function trim() {
-	local x=$(echo "$1" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-	echo $x
-}
+source "$SCRIPT_DIR/text.sh"
 
 log_debug "Normalizing inputs..."
 input_apiUrl=$(trim "$input_apiUrl")
